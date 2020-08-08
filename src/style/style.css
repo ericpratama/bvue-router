@@ -28,17 +28,14 @@ div.col.navcol{
 }
 
 .sidecol {
-  
-  width:90px;
-  height:970px;
+  height:890px;
+  width: 90px;
   background: #114483;
+  padding-left: 0px;
+  padding-right: 0px;
+  transition: all 500ms linear;
 }
 
-.navcol{
-  padding-left:0px; 
-  padding-right:0px;
-  width: 95%;
-}
 
 .navitem{
   padding-top:8px;
@@ -46,9 +43,9 @@ div.col.navcol{
 }
 
 .sidebar_img{
- margin-top: 30px;
- width:20px;
- height:25px;
+  margin-top: 30px;
+  width:20px;
+  height:25px;
 }
 
 .wrapper {
@@ -65,7 +62,6 @@ div.col.navcol{
     background-color: #C4C4C4;
     margin-left: 10px;
     margin-right: 10px;
-    
   }
 
 .dropdown-toggle::after {
@@ -89,4 +85,21 @@ div.col.navcol{
 
 .my_text_button:active{
   color: blue;
+}
+col .navcol{
+  padding-left:0px; 
+  padding: right 0px;
+}
+.text-center{
+  margin-top:250px;
+}
+#powered{
+  width:57px;
+  height:75px;
+}
+.text-left{
+  padding-left:15px;
+}
+.anav{
+  padding-bottom:0px;
 }

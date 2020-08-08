@@ -3,8 +3,8 @@
     <div class="container-fluid">
         <!-- Sidebar -->
         <div class="row">
-          <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div class="text-left" style="padding-left:15px;">
+          <div id="sidecol" class="flex-column justify-content-between sidecol">
+            <div class="text-left">
               <ul class="nav flex-column">
                 <li class="nav-item navitem">
                   <a v-on:click="greet" class="nav-link" href="#">
@@ -70,18 +70,19 @@
             </div>
             <div class="text-center">
               <ul class="nav flex-column">
-                <li class="nav-item navitem">
-                  <a class="nav-link" href="#">
+                <li class="nav-item navitem anav">
+                  <a class="anav nav-link" href="#">
                     <img v-if="counter=='open' " src = "@/assets/longicon10.svg" >
-                    <img v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
+                    <img id="powered" v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
                   </a>
                 </li>
               </ul>
-            </div>         
+            </div> 
+            <!-- tanda -->
           </div>
 
           <!-- Navbar-->
-          <div class="col navcol">
+          <div class="col navcol" style="padding-left:0px;padding-right:0px;">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#EBEBEB;">
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
@@ -242,14 +243,10 @@
                               <a >
                                 <b-button id="buttonsave" class="buttonstyle" type="submit">Save</b-button>
                               </a>
-                                
                             </div>
                           </b-col>
                           
                         </b-row>
-                        <h1>Getting Started with Vue.js and Font Awesome</h1>
-                        <p>Have a cup of coffee: <font-awesome-icon icon="coffee" /></p>
-                        
                         <!-- row button -->
                     </b-form>
                 </b-container>
@@ -346,13 +343,11 @@ export default {
 </script>
 <style>
 body{
-    margin:0 px;
-    padding:0 px;
+    /* margin:0 px;
+    padding:0 px; */
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
 }
 .main_kontener{
     background-color: none;
@@ -366,18 +361,12 @@ body{
 }
 
 hr{
-    position: absolute;
-    background: #C4C4C4;
-    width: 98%;
-    height: 1px;
+  position: absolute;
+  background: #C4C4C4;
+  width: 98%;
+  height: 1px;
 }
 
-.sidecol {
-    transition: all 500ms linear;
-    width:90px;
-    height:970px;
-    background: #114483;
-  }
 .buttonstyle{
   float: right;
 }
@@ -409,5 +398,10 @@ hr{
 ul.nav.flex-column.icon10{
   padding:0px;
 }
-
+.text-left{
+  padding-left:15px;
+}
+.anav{
+  padding-bottom:0px;
+}
 </style>

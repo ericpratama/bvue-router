@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
           <!-- Sidebar -->
-          <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
+          <div id="sidecol" class="flex-column justify-content-between sidecol">
             <div class="text-left">
               <ul class="nav flex-column">
                 <li class="nav-item navitem">
@@ -70,10 +70,10 @@
             </div>
             <div class="text-center">
               <ul class="nav flex-column">
-                <li class="nav-item navitem">
-                  <a class="nav-link" href="#">
+                <li class="nav-item navitem anav">
+                  <a class="anav nav-link" href="#">
                     <img v-if="counter=='open' " src = "@/assets/longicon10.svg" >
-                    <img v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
+                    <img id="powered" v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
                   </a>
                 </li>
               </ul>
@@ -82,7 +82,7 @@
           </div>
 
           <!-- Navbar-->
-          <div class="col navcol">
+          <div class="col navcol" style="padding-left:0px;padding-right:0px;">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#EBEBEB;">
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
@@ -198,15 +198,17 @@
   </div>
 </template>
 <style>
-  .sidecol{
+  /* .sidecol{
       padding-left: 0px;
       padding-right: 0px;
       width: 5%;
-      background: #114483;
       transition: all 500ms linear;
-  }
+  } */
   .text-left{
     padding-left:15px;
+  }
+  .anav{
+    padding-bottom:0px;
   }
 </style>
 <script>
@@ -243,13 +245,11 @@ export default {
             // `event` is the native DOM event
             if (this.counter == 'close') {
                 this.counter = 'open'
-                // alert('status side bar ' + this.counter + '!')
                 document.getElementById("sidecol").style.width = "219px";
             }
             else if (this.counter == 'open'){
                 this.counter = 'close'
-                document.getElementById("sidecol").style.width = "5%";
-                // alert('close ' + this.counter + '!')
+                document.getElementById("sidecol").style.width = "6%";
             }
         },navigate() {
           router.push({ name: "Desktop5" });

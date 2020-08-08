@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <!-- Sidebar -->
         <div class="row">
-          <div id="sidecol" class="d-flex flex-column justify-content-between" style="background: #114483">
+          <div id="sidecol" class="flex-column justify-content-between sidecol">
             <div class="text-left">
               <ul class="nav flex-column">
                 <li class="nav-item navitem">
@@ -70,18 +70,19 @@
             </div>
             <div class="text-center">
               <ul class="nav flex-column">
-                <li class="nav-item navitem">
-                  <a class="nav-link" href="#">
+                <li class="nav-item navitem anav">
+                  <a class="anav nav-link" href="#">
                     <img v-if="counter=='open' " src = "@/assets/longicon10.svg" >
-                    <img v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
+                    <img id="powered" v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> 
+            <!-- tanda -->
           </div>
 
           <!-- Navbar-->
-          <div class="col navcol" style="background-color:#f5f5f5;">
+          <div class="col navcol" style="padding-left:0px;padding-right:0px;">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#EBEBEB;">
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
@@ -230,7 +231,7 @@
                                         
                                     </b-row>
                                     <!-- button save and cancel -->
-                                    <b-row style="padding-bottom:40px;">
+                                    <b-row style="padding-bottom:20px;">
                                       <b-col lg="9">
                                       </b-col>
                                       <b-col lg="1">
@@ -383,11 +384,11 @@ name: 'desktop4',
                 this.counter = 'open'
                 document.getElementById("sidecol").style.width = "219px";
                 
-                document.getElementsByClassName("nav-item").style.marginLeft = "100px";
+                // document.getElementsByClassName("nav-item").style.marginLeft = "100px";
             }
             else if (this.counter == 'open'){
                 this.counter = 'close'
-                document.getElementById("sidecol").style.width = "80px";
+                document.getElementById("sidecol").style.width = "90px";
 
                 
             }
@@ -478,17 +479,9 @@ name: 'desktop4',
 }
 </script>
 <style>
-body{
-    margin:0 px;
-    padding:0 px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-}
+
 #app{
-    background-color:#E5E5E5;
+    background-color:#F5F5F5;
 }
 .main_kontener{
     padding-left:50px !important;
@@ -498,7 +491,6 @@ body{
     font-family: Roboto;
     font-style: normal;
     background-color: #f5f5f5;
-    
 }
 .konten{
     padding-top: 20px;
@@ -508,9 +500,6 @@ body{
     padding-left:72px;
     padding-top:10px;
     text-align: left;
-}
-ul.nav.flex-column{
-  padding-left:10px;
 }
 hr{
     position: absolute;
@@ -553,7 +542,6 @@ hr{
   margin-bottom: 50px !important; 
 }
 .text-muted{
-  
   color:red;
   font-family: Roboto;
   font-style: normal;
@@ -573,7 +561,6 @@ hr{
 .nav-tabs .nav-link{
   padding-top: 20px;
   padding-bottom: 20px;
-
   border: 0px solid transparent !important;
   border-top-left-radius: .25rem !important;
   border-top-right-radius: .25rem !important;
@@ -604,17 +591,7 @@ a {
   background-color: transparent;
 }
 
-.ujung{
-  background-color: blue;
-  padding-right:0px;
-}
 /* sidebar */
-#sidecol{
-    
-    width: 80px;
-    
-    transition: all 500ms linear;
-}
 li.nav-item{
   margin-left: 0px;
   margin-right:0px;
@@ -649,7 +626,11 @@ li.nav-item{
 }
 /* button */
 
-ul.nav.flex-column.icon10{
-  padding:0px;
+
+.text-left{
+  padding-left:15px;
+}
+.anav{
+  padding-bottom:0px;
 }
 </style>

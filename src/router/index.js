@@ -22,6 +22,7 @@ import Desktop1 from '@/components/desktop1'
 import Desktop2 from '@/components/desktop2'
 import Desktop4 from '@/components/desktop4'
 import Desktop9 from '@/components/desktop9'
+import Details from '@/components/details'
 import Tbar3 from '@/components/tbar3'
 
 
@@ -32,7 +33,7 @@ export default new Router({
         {
             path: "/",
             redirect: {
-                name: "Page1"
+                name: "Tbar3"
             }
         },
         {
@@ -59,6 +60,21 @@ export default new Router({
             path: '/desktop4',
             name: 'Desktop4',
             component: Desktop4
+        },
+        {
+            path: '/desktop9',
+            name: 'Desktop9',
+            component: Desktop9
+        },
+        {
+            path: '/details',
+            name: 'Details',
+            component: Details
+        },
+        {
+            path: '/tbar3',
+            name: 'Tbar3',
+            component: Tbar3
         }
     ]
 })

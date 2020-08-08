@@ -3,8 +3,8 @@
     <div class="container-fluid">
         <!-- Sidebar -->
         <div class="row">
-          <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div class="text-left" style="padding-left:15px;">
+          <div id="sidecol" class="flex-column justify-content-between sidecol">
+            <div class="text-left">
               <ul class="nav flex-column">
                 <li class="nav-item navitem">
                   <a v-on:click="greet" class="nav-link" href="#">
@@ -70,10 +70,10 @@
             </div>
             <div class="text-center">
               <ul class="nav flex-column">
-                <li class="nav-item navitem">
-                  <a class="nav-link" href="#">
+                <li class="nav-item navitem anav">
+                  <a class="anav nav-link" href="#">
                     <img v-if="counter=='open' " src = "@/assets/longicon10.svg" >
-                    <img v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
+                    <img id="powered" v-if="counter=='close' " src = "@/assets/sidebar_icon_10.svg" >
                   </a>
                 </li>
               </ul>
@@ -82,7 +82,7 @@
           </div>
 
           <!-- Navbar-->
-          <div class="col navcol" style="background-color:#f5f5f5;">
+          <div class="col navcol" style="padding-left:0px;padding-right:0px;">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#EBEBEB;">
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
@@ -389,7 +389,7 @@ name: 'tbar3',
             }
             else if (this.counter == 'open'){
                 this.counter = 'close'
-                document.getElementById("sidecol").style.width = "5%";
+                document.getElementById("sidecol").style.width = "90px";
 
                 
             }
@@ -487,8 +487,7 @@ body{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+   
 }
 #app{
     background-color:#E5E5E5;
@@ -590,18 +589,7 @@ a {
   background-color: transparent;
 }
 
-.ujung{
-  background-color: blue;
-  padding-right:0px;
-}
-/* sidebar */
-.sidecol{
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 5%;
-    background: #114483;
-    transition: all 500ms linear;
-}
+
 #tabschedule{
   margin-left:50px;
 }
@@ -634,4 +622,10 @@ a {
   line-height: 24px;
 }
 /* button */
+.text-left{
+  padding-left:15px;
+}
+.anav{
+  padding-bottom:0px;
+}
 </style>
