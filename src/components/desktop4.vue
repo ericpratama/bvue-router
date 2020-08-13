@@ -125,9 +125,19 @@
             <div>
                               <!-- Main Content Start-->
                 <b-container fluid class="main_kontener">
-                  <div>
-                    <b-breadcrumb :items="items"></b-breadcrumb>
-                  </div>
+                  <b-row class="rowatas">
+                    <b-col lg="3">
+                      <b-breadcrumb :items="items"></b-breadcrumb>
+                    </b-col>
+                    
+                    <b-col lg="9">
+                      <div class="custom-control custom-switch text-right" style="margin-top:15px;">
+                        <input type="checkbox" class="custom-control-input" id="customSwitches">
+                        <label class="custom-control-label" for="customSwitches"></label>
+                      </div>
+                    </b-col>
+                    
+                  </b-row>
                   <div>
                     <div  class="testing" >
                       <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
@@ -253,9 +263,9 @@
                                     </b-row>
                                 </b-form>
                             </b-tab>
-                              <b-tab title="SCHEDULE"><p>I'm the second tab</p>
+                              <b-tab title="SCHEDULE">
                                 <template v-slot:title>
-                                  <img class="sidebar_icon" src="@/assets/tbar3schedule.svg" style="">
+                                  <img class="sidebar_icon" src="@/assets/d4schedule.svg" style="">
                                 </template>
                                   <v-app id="dayspan" v-cloak>
                      <ds-calendar-app ref="app"
@@ -566,7 +576,7 @@ hr{
   border-top-right-radius: .25rem !important;
   text-align: center;
   width: 208px;
-  height: 80px;
+  height: 87px;
   background-color: #f1f1f1 ;
   
 }

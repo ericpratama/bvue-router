@@ -1,5 +1,5 @@
 <template>
-    <div class="hello">
+    <div class="container">
         <h1>{{ msg }}</h1>
         <router-link to="/desktop1">desktop1</router-link>
         <router-link to="/desktop2">desktop2</router-link>
@@ -22,6 +22,9 @@
 </script>
 
 <style scoped>
+    .container{
+        text-align: center;
+    }
     h1, h2 {
         font-weight: normal;
     }

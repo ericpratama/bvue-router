@@ -125,14 +125,22 @@
             <div class="main_kontener">
                               <!-- Main Content Start-->
                 <b-container fluid>
-                    <b-row>
-                        <b-col lg="11">
-                            <b-breadcrumb :items="items"></b-breadcrumb>
-                        </b-col>
-                        <b-col lg="1">
-                            
-                        </b-col>
-                    </b-row>
+                    <div>
+                  <b-row class="rowatas">
+                    <b-col lg="3">
+                      <b-breadcrumb :items="items"></b-breadcrumb>
+                    </b-col>
+                    
+                    <!-- <b-col lg="9">
+                      <div class="custom-control custom-switch text-right" style="margin-top:15px;">
+                        <input type="checkbox" class="custom-control-input" id="customSwitches">
+                        <label class="custom-control-label" for="customSwitches"></label>
+                      </div>
+                    </b-col> -->
+                    
+                  </b-row>
+                  
+                </div>
                     <b-row>
                         <b-col lg="11">
                             <hr>
@@ -353,13 +361,17 @@ body{
     background-color: none;
     padding-top:20px;
     padding-left: 10%;
+    color: #555555;
 }
 .konten{
     padding-top: 30px;
     background-color: none;
     text-align: left;
 }
-
+.form-group{
+  font-size: 16px;
+  line-height: 24px;
+}
 hr{
   position: absolute;
   background: #C4C4C4;

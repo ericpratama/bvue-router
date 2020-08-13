@@ -4,7 +4,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './style/style.css'
 
 import Vuetify from 'vuetify'
 import DaySpanVuetify from 'dayspan-vuetify'
